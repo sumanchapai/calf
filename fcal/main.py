@@ -28,7 +28,7 @@ def run():
     parser.add_argument("-a", "--after", metavar='', type=int, default=0)
     # Display format
     parser.add_argument("-f", "--format", metavar='', type=str,
-            default="%y-%m-%d") # Locale
+            default="%Y-%m-%d") # Locale
     args = parser.parse_args()
     now = datetime.datetime.now()
     start_date = now - datetime.timedelta(days=args.before)
