@@ -19,7 +19,7 @@ def display(
         start += increment
 
 
-def main():
+def run():
     parser = argparse.ArgumentParser()
     # Days before current day
     parser.add_argument("-b", "--before", metavar='', type=int, default=1)
@@ -35,7 +35,3 @@ def main():
     if not args.format.startswith('%'):
         args.format = '%' + args.format
     display(start_date, end_date, args.format)
-
-
-if __name__ == "__main__":
-    main()
