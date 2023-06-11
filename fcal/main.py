@@ -16,6 +16,7 @@ def display(
     """
     while start < end:
         sys.stdout.write(start.strftime(fmt))
+        sys.stdout.write("\n")
         start += increment
 
 
@@ -27,7 +28,7 @@ def run():
     parser.add_argument("-a", "--after", metavar='', type=int, default=1)
     # Display format
     parser.add_argument("-f", "--format", metavar='', type=str,
-            default="%y-%m-%d\n") # Locale
+            default="%y-%m-%d") # Locale
     args = parser.parse_args()
     now = datetime.datetime.now()
     start_date = now - datetime.timedelta(days=args.before)
