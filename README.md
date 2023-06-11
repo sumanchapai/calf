@@ -1,6 +1,6 @@
 ## Installation
 
-```
+```sh
 pip install fcal
 ```
 
