@@ -33,6 +33,4 @@ def run():
     now = datetime.datetime.now()
     start_date = now - datetime.timedelta(days=args.before)
     end_date = now + datetime.timedelta(days=args.after)
-    if not args.format.startswith('%'):
-        args.format = '%' + args.format
     display(start_date, end_date, args.format)
