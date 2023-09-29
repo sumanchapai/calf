@@ -15,6 +15,9 @@ fcal -b 10 -f '%m-%d'
 
 # Print the last 10 days and next 10 days in local datetime format %c  
 fcal -b 10 -a 10 -f '%c'
+
+# Skip the dates until the next year skiping every 7 days.
+fcal -a 365 -s 7
 ```
 
 ## Development
