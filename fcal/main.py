@@ -26,6 +26,8 @@ def run():
     parser.add_argument("-b", "--before", metavar='', type=int, default=0)
     # Days after current day
     parser.add_argument("-a", "--after", metavar='', type=int, default=0)
+    # Step
+    parser.add_argument("-s", "--step", metavar='', type=int, default=1)
     # Display format
     parser.add_argument("-f", "--format", metavar='', type=str,
             default="%Y-%m-%d") # Locale
@@ -33,4 +35,5 @@ def run():
     now = datetime.datetime.now()
     start_date = now - datetime.timedelta(days=args.before)
     end_date = now + datetime.timedelta(days=args.after + 1)
-    display(start_date, end_date, args.format)
+    step = datetime.timedelta(days=abs(args.step))
+    display(start_date, end_date, args.format, step)
